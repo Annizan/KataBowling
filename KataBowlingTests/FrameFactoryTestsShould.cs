@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KataBowlingMainProject;
+﻿using KataBowlingMainProject;
 using NFluent;
 using NUnit.Framework;
 
@@ -30,20 +25,6 @@ namespace KataBowlingTests
         {
             Frame frame = FrameFactory.Create("X");
             Check.That(frame).IsInstanceOf<Strike>();
-        }
-    }
-
-    public static class FrameFactory
-    {
-        public static Frame Create(string frameInString)
-        {
-            var isStrike = !int.TryParse(frameInString[0].ToString(), out int firstRoll);
-            if (isStrike)
-                return new Strike();
-            var isSpare = !int.TryParse(frameInString[1].ToString(), out int secondRoll);
-            if(isSpare)
-                return new Spare(firstRoll);
-            return new BasicFrame(firstRoll, secondRoll);
         }
     }
 }
