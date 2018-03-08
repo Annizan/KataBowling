@@ -31,5 +31,26 @@ namespace KataBowlingTests
             Frame basicFrame = new Strike();
             Check.That(basicFrame.GetBowlingPinFallen()).IsEqualTo(10);
         }
+
+        
+        public void Give_The_Score_For_BasicFrame()
+        {
+            Frame basicFrame = new BasicFrame(3, 4);
+            Check.That(basicFrame.GetScore(3, 1)).IsEqualTo(7);
+        }
+
+        public void Give_The_Score_For_SpareFrame()
+        {
+            Frame basicFrame = new Spare(3);
+            Check.That(basicFrame.GetScore(3, 1)).IsEqualTo(13);
+        }
+
+        public void Give_The_Score_For_StrikeFrame()
+        {
+            Frame basicFrame = new Strike();
+            Check.That(basicFrame.GetScore(3, 1)).IsEqualTo(14);
+        }
+
+
     }
 }

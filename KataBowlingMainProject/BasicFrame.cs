@@ -13,5 +13,11 @@
         
 
         #endregion
+
+        public override int GetScore(int nextRoll, int secondNextRoll)
+        {
+            var result = firstRoll + secondRoll;
+            return result;
+        }
     }
 }

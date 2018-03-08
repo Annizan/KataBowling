@@ -11,5 +11,7 @@
             var bowlingPinFallen = firstRoll + secondRoll;
             return bowlingPinFallen;
         }
+
+        public abstract int GetScore(int nextRoll, int secondNextRoll);
     }
 }
