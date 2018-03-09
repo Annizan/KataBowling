@@ -7,8 +7,11 @@
             var isStrike = !int.TryParse(frameInString[0].ToString(), out int firstRoll);
             if (isStrike)
                 return new Strike();
-            var isSpare = !int.TryParse(frameInString[1].ToString(), out int secondRoll);
-            if(isSpare)
+            bool isSpare = false;
+            int secondRoll = 0;
+            if (frameInString.Length >= 2)
+                isSpare = !int.TryParse(frameInString[1].ToString(), out secondRoll);
+            if (isSpare)
                 return new Spare(firstRoll);
             return new BasicFrame(firstRoll, secondRoll);
         }

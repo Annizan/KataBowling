@@ -4,8 +4,8 @@
     {
         public Spare(int firstRoll) 
         {
-            this.firstRoll  = firstRoll; 
-            secondRoll = 10 - firstRoll;
+            this.FirstRoll  = firstRoll; 
+            SecondRoll = 10 - firstRoll;
         }
 
         public override int GetScore(int nextRoll, int secondNextRoll)

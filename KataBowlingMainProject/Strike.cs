@@ -4,8 +4,8 @@
     {
         public Strike()
         {
-            this.firstRoll = 10;
-            this.secondRoll = 0;
+            this.FirstRoll = 10;
+            this.SecondRoll = 0;
         }
 
         public override int GetScore(int nextRoll, int secondNextRoll)

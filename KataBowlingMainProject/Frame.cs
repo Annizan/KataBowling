@@ -2,13 +2,14 @@
 {
     public abstract class Frame
     {
-        protected int firstRoll;
-        protected int secondRoll;
         protected string frameInString;
+
+        public int FirstRoll { get; protected set; }
+        public int SecondRoll { get; protected set; }
 
         public int GetBowlingPinFallen()
         {
-            var bowlingPinFallen = firstRoll + secondRoll;
+            var bowlingPinFallen = FirstRoll + SecondRoll;
             return bowlingPinFallen;
         }
 

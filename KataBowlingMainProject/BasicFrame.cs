@@ -6,8 +6,8 @@
 
         public BasicFrame(int firsRoll, int secondRoll)
         {
-            this.firstRoll = firsRoll;
-            this.secondRoll = secondRoll;
+            this.FirstRoll = firsRoll;
+            this.SecondRoll = secondRoll;
         }
 
         
@@ -16,7 +16,7 @@
 
         public override int GetScore(int nextRoll, int secondNextRoll)
         {
-            var result = firstRoll + secondRoll;
+            var result = FirstRoll + SecondRoll;
             return result;
         }
     }
